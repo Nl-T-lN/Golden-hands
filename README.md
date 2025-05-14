@@ -51,7 +51,7 @@ All made by our talented elders, each with a story, a smile, and a sprinkle of n
 
 ---
 
-## �� Meet the Makers
+## Meet the Makers
 
 > "Our elders may not be professional artisans, but their skills, love, and life experience shine through every product."
 
@@ -71,28 +71,8 @@ All made by our talented elders, each with a story, a smile, and a sprinkle of n
 
 ---
 
-## 📁 Project Structure
-
-```
-/assets
-  /crafts      # All crafts images
-  /pickles     # All pickles images
-  /snacks      # All snacks images
-  /main        # Shared CSS
-index.html     # Main landing page
-crafts.html    # Crafts gallery
-pickles.html   # Pickles gallery
-snacks.html    # Snacks gallery
-```
-
----
-
 ## 🌟 How to Use
-
-1. **Clone this repo:**  
-   `git clone https://github.com/yourusername/goldenhands.git`
-2. **Open `index.html` in your browser.**
-3. **Browse, smile, and get inspired!**
+1. **Browse, buy, smile, and get inspired!**
 
 ---
 
@@ -115,7 +95,6 @@ This project is dedicated to every grandparent, parent, and elder whose hands ha
 ## 📬 Contact
 
 - Email: info@goldenhands.com
-- Phone: (555) 123-4567
 
 ---
 
