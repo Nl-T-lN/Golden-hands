@@ -3,7 +3,50 @@ body { background: #FAF9F6; color: #4A4A4A; font-family: 'Segoe UI', Tahoma, Gen
 .navbar-brand { color: #C5A572 !important; font-weight: bold; }
 .btn-main { background: #C5A572; color: #fff; border-radius: 6px; }
 .btn-main:hover { background: #8B7355; color: #fff; }
-.product-card { border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-.img-box { width: 100%; aspect-ratio: 4/3; background: #eee; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.price { color: #D4AF37; font-weight: bold; font-size: 1.1rem; } 
+.product-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+  background: #C5A572;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.product-card .card-body {
+  background: transparent;
+}
+.product-card .img-box {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  height: 220px;
+  min-height: 220px;
+  max-height: 220px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.price {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.btn-main {
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-main:hover, .btn-main:focus {
+  transform: scale(1.05);
+  background: #b89b5a;
+} 

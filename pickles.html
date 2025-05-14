@@ -91,5 +91,26 @@
         </div>
     </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll('.product-card, .category-card');
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform += ' translateY(30px)';
+  });
+  function reveal() {
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        card.style.transition = 'opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s';
+        card.style.opacity = 1;
+        card.style.transform = card.style.transform.replace(' translateY(30px)', '');
+      }
+    });
+  }
+  window.addEventListener('scroll', reveal);
+  reveal();
+});
+</script>
 </body>
 </html> 
