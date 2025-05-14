@@ -1,0 +1,9 @@
+body { background: #FAF9F6; color: #4A4A4A; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.navbar { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+.navbar-brand { color: #C5A572 !important; font-weight: bold; }
+.btn-main { background: #C5A572; color: #fff; border-radius: 6px; }
+.btn-main:hover { background: #8B7355; color: #fff; }
+.product-card { border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); margin-bottom: 2rem; }
+.img-box { width: 100%; aspect-ratio: 4/3; background: #eee; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.price { color: #D4AF37; font-weight: bold; font-size: 1.1rem; } 
