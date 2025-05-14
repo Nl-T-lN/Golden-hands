@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Golden Hands - Celebrating Artisanal Crafts by Senior Artisans</title>
+	<meta name="description" content="Discover unique handcrafted treasures created by skilled elderly artisans. Support our senior craftspeople while bringing beautiful handmade items into your home.">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/images/favicon.png" type="image/png">
+	
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Golden Hands - Artisanal Crafts by Senior Artisans" />
+	<meta property="og:description" content="Discover unique handcrafted treasures created by skilled elderly artisans. Support our senior craftspeople while bringing beautiful handmade items into your home." />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Golden Hands" />
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<style>
+		:root {
+			--primary-color: #C5A572;
+			--secondary-color: #8B7355;
+			--accent-color: #D4AF37;
+			--text-color: #4A4A4A;
+			--light-bg: #FAF9F6;
+		}
+		
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			color: var(--text-color);
+			background-color: var(--light-bg);
+		}
+		
+		.navbar {
+			background-color: white;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		}
+		
+		.navbar-brand {
+			color: var(--primary-color) !important;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+		
+		.hero-section {
+			background-color: var(--primary-color);
+			color: white;
+			padding: 4rem 0;
+			text-align: center;
+			background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+		}
+		
+		.category-card, .artisan-card {
+			border: none;
+			border-radius: 10px;
+			overflow: hidden;
+			margin-bottom: 2rem;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		}
+		
+		.img-box {
+			width: 100%;
+			aspect-ratio: 4/3;
+			background: #eee;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.img-box img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		
+		.circle-profile {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 0 auto 1rem auto;
+			border: 4px solid var(--primary-color);
+			box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+		}
+		
+		.maker-name {
+			font-weight: bold;
+			text-align: center;
+			cursor: pointer;
+			position: relative;
+			display: block;
+		}
+		
+		.maker-tooltip {
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: 120%;
+			transform: translateX(-50%);
+			background: #fff;
+			color: #333;
+			border-radius: 8px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+			padding: 0.75rem 1rem;
+			min-width: 220px;
+			z-index: 10;
+			font-size: 0.95rem;
+		}
+		
+		.maker-name:hover + .maker-tooltip, .maker-name:focus + .maker-tooltip {
+			display: block;
+		}
+		
+		.footer {
+			background-color: var(--secondary-color);
+			color: white;
+			padding: 3rem 0;
+		}
+
+		.footer a {
+			color: white;
+			text-decoration: none;
+			transition: opacity 0.3s ease;
+		}
+
+		.footer a:hover {
+			opacity: 0.8;
+			color: var(--accent-color);
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+		<div class="container">
+			<a class="navbar-brand" href="/">Golden Hands</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#categories">Categories</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#artisans">Our Artisans</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-outline-primary ms-2" href="#shop">Shop Now</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<div class="container">
+			<h1 class="display-4">Handcrafted with Love and Experience</h1>
+			<p class="lead">Discover unique treasures created by our talented senior artisans</p>
+			<a href="#shop" class="btn btn-light btn-lg mt-3">Shop Now</a>
+		</div>
+	</section>
+
+	<!-- Categories Section -->
+	<section id="categories" class="py-5">
+		<div class="container">
+			<h2 class="text-center mb-5">What Our Elders Make</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<a href="pickles.html" style="text-decoration:none;color:inherit;">
+					<div class="card category-card">
+						<div class="img-box">
+							<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Homemade Pickles by Indian Elderly">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Homemade Pickles</h5>
+							<p class="card-text">Tangy, spicy, and full of love—traditional pickles made in small batches by our elders, using family recipes.</p>
+						</div>
+					</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="crafts.html" style="text-decoration:none;color:inherit;">
+					<div class="card category-card">
+						<div class="img-box">
+							<img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80" alt="Handmade Crafts by Indian Elderly">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Handmade Crafts</h5>
+							<p class="card-text">Simple, heartfelt crafts—decor, toys, and more—created by seniors with care and creativity.</p>
+						</div>
+					</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="snacks.html" style="text-decoration:none;color:inherit;">
+					<div class="card category-card">
+						<div class="img-box">
+							<img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=600&q=80" alt="Traditional Snacks by Indian Elderly">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Traditional Snacks</h5>
+							<p class="card-text">Freshly made snacks and sweets, just like grandma used to make—nostalgic flavors from our elders' kitchens.</p>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Meet Our Elders -->
+	<section id="artisans" class="py-5 bg-light">
+		<div class="container">
+			<h2 class="text-center mb-5">Meet the Makers</h2>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Savitri Amma" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Savitri Amma</span>
+						<div class="maker-tooltip">Known for her mouth-watering mango pickles, Savitri Amma brings the taste of her village to your table.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Ramesh Chacha" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Ramesh Chacha</span>
+						<div class="maker-tooltip">A retired school teacher, Ramesh now crafts simple wooden toys and home items, each with a story.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Pushpa Didi" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Pushpa Didi</span>
+						<div class="maker-tooltip">Pushpa's snacks are a favorite in her neighborhood—now she shares her treats with the world!</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Kiran Uncle" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Kiran Uncle</span>
+						<div class="maker-tooltip">Kiran makes beautiful hand-painted diyas and simple clay pots, inspired by his childhood memories.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Meena Tai" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Meena Tai</span>
+						<div class="maker-tooltip">Meena's hand-stitched cloth bags are both eco-friendly and full of color, just like her personality.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Iqbal Bhai" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Iqbal Bhai</span>
+						<div class="maker-tooltip">Iqbal's homemade papads are a hit at every family gathering—now available for everyone to enjoy.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1500631195312-e3a9a5819f90?auto=format&fit=crop&w=400&q=80" alt="Radha Nani" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Radha Nani</span>
+						<div class="maker-tooltip">Radha Nani's laddoos are made with love and a secret family recipe passed down for generations.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=400&q=80" alt="Sundar Dada" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Sundar Dada</span>
+						<div class="maker-tooltip">Sundar crafts simple bamboo baskets and trays, perfect for your home and kitchen.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="text-center">
+						<div class="circle-profile">
+							<img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Fatima Bi" style="width:100%;height:100%;object-fit:cover;">
+						</div>
+						<span class="maker-name" tabindex="0">Fatima Bi</span>
+						<div class="maker-tooltip">Fatima's masala mixes add a burst of flavor to any meal—her secret is a pinch of love in every batch.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about" class="py-5">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+					<h2>About Golden Hands</h2>
+					<p class="lead">Empowering India's elderly to earn with dignity and joy.</p>
+					<p>Golden Hands is a community initiative that helps senior citizens across India earn a livelihood by sharing their homemade pickles, snacks, and crafts. Our elders may not be professional artisans, but their skills, love, and life experience shine through every product. By supporting them, you help preserve tradition, spread happiness, and bring hope to those who need it most.</p>
+				</div>
+				<div class="col-md-6">
+					<div class="img-box">
+						<img src="https://images.unsplash.com/photo-1500631195312-e3a9a5819f90?auto=format&fit=crop&w=600&q=80" alt="Elderly Indian Couple Smiling">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h5>Golden Hands</h5>
+					<p>Celebrating artisanal crafts and supporting senior artisans</p>
+				</div>
+				<div class="col-md-4">
+					<h5>Quick Links</h5>
+					<ul class="list-unstyled">
+						<li><a href="#shop">Shop All</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="privacy.html">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h5>Contact Us</h5>
+					<p>Email: info@goldenhands.com<br>
+					Phone: (555) 123-4567</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
