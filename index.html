@@ -48,11 +48,82 @@
 		}
 		
 		.hero-section {
-			background-color: var(--primary-color);
+			position: relative;
 			color: white;
-			padding: 4rem 0;
+			padding: 2.5rem 0;
 			text-align: center;
-			background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+			background-color: var(--primary-color);
+			background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 70%, var(--accent-color) 100%);
+			z-index: 0;
+			overflow: hidden;
+		}
+		
+		.hero-section::before {
+			content: "";
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background-image:
+				repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 10px),
+				repeating-linear-gradient(-45deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 10px);
+			opacity: 0.7;
+			z-index: 1;
+		}
+		
+		.hero-section h1 {
+			font-size: 3.5rem;
+			font-weight: 700;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+		}
+		
+		.hero-section p.lead {
+			font-size: 1.4rem;
+			margin-bottom: 2rem;
+			text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+		}
+		
+		.hero-text-box {
+			background-color: rgba(250, 249, 246, 0.9);
+			padding: 1.5rem;
+			border-radius: 10px;
+			max-width: 650px;
+			margin: 0 auto 1rem auto;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+			position: relative;
+			z-index: 2;
+		}
+		
+		.hero-text-box h1 {
+			color: var(--secondary-color);
+			font-size: 2.8rem;
+			text-shadow: none;
+		}
+		
+		.hero-text-box p.lead {
+			color: var(--text-color);
+			font-size: 1.1rem;
+			text-shadow: none;
+			margin-bottom: 0;
+		}
+		
+		.hero-section .btn-light {
+			position: relative;
+			z-index: 2;
+			margin-top: 1rem;
+			background-color: #fff;
+			color: var(--secondary-color);
+			border-color: #fff;
+			padding: 0.75rem 1.75rem;
+			font-size: 1.1rem;
+			font-weight: bold;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			transition: transform 0.2s, box-shadow 0.2s;
+		}
+		
+		.hero-section .btn-light:hover {
+			background-color: var(--light-bg);
+			color: var(--secondary-color);
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 		}
 		
 		.category-card, .artisan-card {
@@ -121,7 +192,38 @@
 		.footer {
 			background-color: var(--secondary-color);
 			color: white;
-			padding: 3rem 0;
+			padding: 2rem 0;
+			position: relative;
+			overflow: hidden;
+			z-index: 0;
+		}
+
+		.footer::before {
+			content: "";
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background-image:
+				repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 10px),
+				repeating-linear-gradient(-45deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 10px);
+			opacity: 0.5;
+			z-index: 1;
+		}
+
+		.footer .container {
+			position: relative;
+			z-index: 2;
+		}
+
+		.footer h5 {
+			font-size: 1.1rem;
+			margin-bottom: 0.75rem;
+			color: var(--accent-color);
+		}
+
+		.footer p,
+		.footer ul li a {
+			font-size: 0.9rem;
+			opacity: 0.9;
 		}
 
 		.footer a {
@@ -133,6 +235,18 @@
 		.footer a:hover {
 			opacity: 0.8;
 			color: var(--accent-color);
+		}
+
+		.styled-section-title {
+		    background-color: var(--primary-color);
+		    color: white !important;
+		    padding: 0.6rem 2rem;
+		    border-radius: 50px;
+		    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+		    display: inline-block;
+		    font-size: 1.8rem;
+		    font-weight: 600;
+		    letter-spacing: 0.5px;
 		}
 	</style>
 </head>
@@ -169,16 +283,20 @@
 	<!-- Hero Section -->
 	<section class="hero-section">
 		<div class="container">
-			<h1 class="display-4">Handcrafted with Love and Experience</h1>
-			<p class="lead">Discover unique treasures created by our talented senior artisans</p>
+			<div class="hero-text-box">
+				<h1 class="display-4">Handcrafted with Love and Experience</h1>
+				<p class="lead">Discover unique treasures created by our talented senior artisans</p>
+			</div>
 			<a href="#shop" class="btn btn-light btn-lg mt-3">Shop Now</a>
 		</div>
 	</section>
 
 	<!-- Categories Section -->
-	<section id="categories" class="py-5">
+	<section id="categories" class="py-3">
 		<div class="container">
-			<h2 class="text-center mb-5">What Our Elders Make</h2>
+			<div class="text-center">
+				<h2 class="mb-4 styled-section-title">What Our Elders Make</h2>
+			</div>
 			<div class="row">
 				<div class="col-md-4">
 					<a href="pickles.html" style="text-decoration:none;color:inherit;">
@@ -226,7 +344,9 @@
 	<!-- Meet Our Elders -->
 	<section id="artisans" class="py-5 bg-light">
 		<div class="container">
-			<h2 class="text-center mb-5">Meet the Makers</h2>
+			<div class="text-center">=
+			<h2 class="mb-4 styled-section-title">Meet the Makers</h2>
+			</div>
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center">
 				<div class="col">
 					<div class="text-center">
@@ -325,13 +445,10 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="footer">
+	<footer class="hero-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<h5>Golden Hands</h5>
-					<p>Celebrating artisanal crafts and supporting senior artisans</p>
-				</div>
+
 				<div class="col-md-4">
 					<h5>Quick Links</h5>
 					<ul class="list-unstyled">
